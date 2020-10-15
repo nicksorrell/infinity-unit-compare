@@ -1,0 +1,280 @@
+.profileName {
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px black;
+    margin-bottom: 5px;
+}
+
+.equipment,
+.skills,
+.attributes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+}
+
+.equipment,
+.skills {
+    margin-top: 5px;
+}
+
+.skills {
+    max-width: 700px;
+    flex-wrap: wrap;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin: 2px 5px;
+}
+
+.item:last-child {
+    margin-right: none;
+}
+
+.bold,
+.item {
+    text-shadow: 1px 1px 1px black;
+}
+
+.data {
+    padding: 5px 10px;
+    background: rgba(100, 149, 237, 0.25);
+    border-radius: 5px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    align-self: baseline;
+}
+
+.attributes {
+    background: rgba(255, 255, 255, 0.1);
+    color: black;
+    font-size: 14px;
+    border-radius: 5px 5px 20px 15px;
+    padding: 5px;
+    padding-right: 0;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
+}
+
+.attributeRow {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0 5px 10px;
+    background: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    left: -10px;
+    box-shadow: 0 0 5px black;
+}
+
+.logo {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.attribute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attributeHeader {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 0 15px;
+}
+
+.attributeValue {
+    font-weight: bold;
+}
+
+.chars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.char {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.type {
+    height: 15px;
+}
+
+.char1 {
+    background-image: url('/infinity/assets/img/char/cube.svg');
+}
+
+.char3 {
+    background-image: url('/infinity/assets/img/char/regular.svg');
+}
+
+.char4 {
+    background-image: url('/infinity/assets/img/char/irregular.svg');
+}
+
+.char6,
+.char23 {
+    background-image: url('/infinity/assets/img/char/impetuous.svg');
+}
+
+.char7 {
+    background-image: url('/infinity/assets/img/char/frenzy.svg');
+}
+
+.char20 {
+    background-image: url('/infinity/assets/img/char/cube2.svg');
+}
+
+.char21 {
+    background-image: url('/infinity/assets/img/char/hackable.svg');
+}
+
+.char27 {
+    background-image: url('/infinity/assets/img/char/peripheral.svg');
+}
+
+.data101,
+.data102,
+.data103,
+.data104,
+.data105 {
+    background: rgba(0, 176, 242, 0.5);
+}
+
+.attributes101,
+.attributes102,
+.attributes103,
+.attributes104,
+.attributes105 {
+    background: rgba(0, 176, 242);
+}
+
+.data201,
+.data202,
+.data204,
+.data205 {
+    background: rgba(255, 144, 0, 0.5);
+}
+
+.attributes201,
+.attributes202,
+.attributes204,
+.attributes205 {
+    background: rgba(255, 144, 0);
+}
+
+.data301,
+.data302,
+.data303,
+.data304,
+.data305 {
+    background: rgba(0, 125, 39, 0.5);
+}
+
+.attributes301,
+.attributes302,
+.attributes303,
+.attributes304,
+.attributes305 {
+    background: rgba(0, 125, 39, 1);
+}
+
+.data401,
+.data402,
+.data403,
+.data404 {
+    background: rgba(230, 218, 155, 0.5);
+}
+
+.attributes401,
+.attributes402,
+.attributes403,
+.attributes404 {
+    background: rgba(230, 218, 155);
+}
+
+.data501,
+.data502,
+.data503,
+.data504 {
+    background: rgba(206, 24, 31, 0.5);
+}
+
+.attributes501,
+.attributes502,
+.attributes503,
+.attributes504 {
+    background: rgba(206, 24, 31);
+}
+
+.data601,
+.data602,
+.data603,
+.data604 {
+    background: rgba(64, 11, 95, 0.5);
+}
+
+.attributes601,
+.attributes602,
+.attributes603,
+.attributes604 {
+    background: rgba(64, 11, 95);
+}
+
+.data701,
+.data702,
+.data703 {
+    background: rgba(175, 167, 188, 0.5);
+}
+
+.attributes701,
+.attributes702,
+.attributes703 {
+    background: rgba(175, 167, 188);
+}
+
+.data902,
+.data903,
+.data904,
+.data905,
+.data906,
+.data907,
+.data908 {
+    background: rgba(114, 136, 104, 0.5);
+}
+
+.attributes902,
+.attributes903,
+.attributes904,
+.attributes905,
+.attributes906,
+.attributes907,
+.attributes908 {
+    background: rgba(114, 136, 104);
+}
+
+.data1001{
+    background: rgba(0, 84, 112, 0.5);
+}
+
+.attributes1001 {
+    background: rgba(0, 84, 112);
+}

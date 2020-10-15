@@ -1,0 +1,76 @@
+.group {
+    border: none;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.group:last-of-type {
+    margin-bottom: 0;
+}
+
+.profiles {
+    border: none;
+}
+
+.options {
+    border: 1px solid rgba(100, 149, 237, 1);
+    border-radius: 5px;
+}
+
+.options:last-child {
+    margin-bottom: 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.optionsHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.headerNameColumn {
+    width: 175px;
+    margin-left: 10px;
+}
+
+.headerGearColumn {
+    width: 250px;
+    margin-left: 5px;
+    flex-grow: 1;
+}
+
+.headerMeleeColumn {
+    width: 150px;
+    margin-left: 5px;
+    flex-grow: 1;
+}
+
+.headerSwcColumn,
+.headerCostColumn {
+    width: 25px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.headerCostColumn {
+    margin-right: 10px;
+}
+
+.option {
+    background: rgb(100, 149, 237, 0.5);
+    font-size: 11px;
+    padding: 2px 0;
+}
+
+.option:nth-of-type(even) {
+    background: rgb(100, 149, 237, 0.25);
+}

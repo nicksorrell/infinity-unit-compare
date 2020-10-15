@@ -1,0 +1,284 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.unit-list {
+    padding-right: 10px;
+    overflow-y: scroll;
+    flex-shrink: 0;
+}
+
+.unit {
+    position: relative;
+    width: 225px;
+    font-size: 14px;
+    background: rgba(100, 149, 237, 0.25);
+    border: 1px solid cornflowerblue;
+    border-left: none;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 10px 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.unit:hover {
+    background: rgba(100, 149, 237, 0.75);
+    border-color: white;
+    box-shadow: 1px 0px 8px cornflowerblue;
+}
+
+.unitDisabled {
+    background: gray;
+    border-color: darkgray;
+}
+
+.unitDisabled:hover {
+    background: #aaa;
+    border-color: white;
+    box-shadow: none;
+}
+
+.unit img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.unitDisabled img {
+    opacity: 0.5;
+}
+
+.unitType {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 2px;
+    padding-right: 4px;
+    font-size: 12px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 20px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px auto;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0,  0.75);
+}
+
+.unitCompare {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: center;
+}
+
+.unitActive {
+    background: rgba(100, 149, 237, 0.75);
+}
+
+.sorting {
+    display: flex;
+    flex-direction: row;
+    font-size : 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sorting p {
+    text-align: center;
+    font-weight: bold;
+    width: 55px;
+}
+
+.sortOption {
+    padding: 1px 3px;
+    border-radius: 15px;
+    width: 50px;
+    font-size: 12px;
+    flex-grow: 0;
+    margin: 0 5px;
+    text-align: center;
+    background: rgba(100, 149, 237, 0.25);
+    border: 1px solid cornflowerblue;
+}
+
+.sortOption:hover {
+    background: rgba(100, 149, 237, 0.75);
+    border-color: white;
+    box-shadow: 1px 0px 8px cornflowerblue;
+    cursor: pointer;
+}
+
+.sortOptionActive {
+    background: rgba(100, 149, 237, 0.75);
+}
+
+.titlePane {
+    padding: 5px;
+    margin: 5px auto;
+    max-width: 220px;
+    border-bottom: 1px solid #555;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    background-repeat: no-repeat;
+}
+
+.logo101 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/panoceania.svg);
+}
+
+.logo103 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/military-orders.svg);
+}
+
+.logo105 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/varuna.svg);
+}
+
+.logo106 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/winterfor.svg);
+}
+
+.logo201 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/yu-jing.svg);
+}
+
+.logo202 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/imperial-service.svg);
+}
+
+.logo204 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/invincible-army.svg);
+}
+
+.logo205 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/white-banner.svg);
+}
+
+.logo301 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/ariadna.svg);
+}
+
+.logo304 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/usariadna.svg);
+}
+
+.logo305 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/tartary.svg);
+}
+
+.logo401 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/haqqislam.svg);
+}
+
+.logo402 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/hassassin-bahram.svg);
+}
+
+.logo404 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/ramah-taskforce.svg);
+}
+
+.logo501 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/nomads.svg);
+}
+
+.logo502 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/corregidor.svg);
+}
+
+.logo503 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/bakunin.svg);
+}
+
+.logo504 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/tunguska.svg);
+}
+
+.logo601 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/combined-army.svg);
+}
+
+.logo602 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/morat.svg);
+}
+
+.logo603 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/shasvastii.svg);
+}
+
+.logo604 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/onyx.svg);
+}
+
+.logo701 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/aleph.svg);
+}
+
+.logo703 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/operations.svg);
+}
+
+.logo902 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/druze.svg);
+}
+
+.logo903 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/japanese-secessionist-army.svg);
+}
+
+.logo904 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/ikari.svg);
+}
+
+.logo905 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/starco.svg);
+}
+
+.logo906 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/spiral-corps.svg);
+}
+
+.logo907 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/foreign-company.svg);
+}
+
+.logo908 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/dahshat.svg);
+}
+
+.logo1001 {
+    background: url(https://assets.corvusbelli.net/army/img/logo/factions/o-12.svg);
+}
+
+::-webkit-scrollbar {
+    background: #555;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+    border-radius: 5px;
+}
