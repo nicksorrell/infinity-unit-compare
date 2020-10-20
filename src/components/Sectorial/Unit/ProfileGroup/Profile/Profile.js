@@ -10,7 +10,7 @@ function Profile (props) {
             return (
                 <div
                     key={index}
-                    className={[styles.char, styles['char' + char.id]].join(
+                    className={[styles.char, 'char' + char.id].join(
                         ' '
                     )}
                     title={char.name}
