@@ -27,11 +27,9 @@ function UnitComparer() {
         factions: {},
         equipment: {},
         weapons: {},
-        skills: {},
-        isLoaded: false
+        skills: {}
     });
     const [currentSectorial, setCurrentSelectorial] = useState({
-        isLoaded: false,
         unitsN3: [],
         unitsN4: [],
         filtersN4: {}
@@ -49,7 +47,7 @@ function UnitComparer() {
                 });
                 setIsLoaded(true);
             });
-    });
+    }, []);
 
     const getParentFactions = (factionArray) => {
         let factions = [];
@@ -85,7 +83,6 @@ function UnitComparer() {
 
     const sectorialLoadedCallback = (data) => {
         setCurrentSelectorial({
-            isLoaded: true,
             unitsN3: data.n3.sort((a, b) => {
                 if (a.ISC[0] > b.ISC[0]) return 1;
                 if (a.ISC[0] < b.ISC[0]) return -1;

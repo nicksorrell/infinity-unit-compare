@@ -15,33 +15,39 @@ function Sectorial(props) {
     const n3SectorialUrl = './assets/json/' + props.id + '.json';
     const n4SectorialUrl =
         'https://api.corvusbelli.com/army/units/en/' + props.id;
-    let unitsN3 = props.data.unitsN3;
 
+    const [isLoaded, setIsLoaded] = useState('false');
     const [sorting, setSorting] = useState('name');
     const [useInches, setUseInches] = useState(true);
+    const [data, setData] = useState({
+        unitsN3: [],
+        unitsN4: [],
+        filtersN4: {}
+    });
+
     useEffect(() => {
         axios.all([axios.get(n3SectorialUrl), axios.get(n4SectorialUrl)]).then(
             axios.spread((...responses) => {
                 const n3Response = responses[0];
                 const n4Response = responses[1];
 
-                props.loadCallback({
-                    n3: n3Response.data.units,
-                    n4: {
-                        units: n4Response.data.units,
-                        filters: n4Response.data.filters
-                    }
+                setData({
+                    unitsN3: n3Response.data.units,
+                    unitsN4: n4Response.data.units,
+                    filtersN4: n4Response.data.filters
                 });
+
+                setIsLoaded(true);
             })
         );
-    });
+    }, [n3SectorialUrl, n4SectorialUrl]);
 
-    if (!props.data.isLoaded) {
+    if (!isLoaded) {
         return <p>Loading...</p>;
     }
 
     if (sorting === 'name') {
-        unitsN3 = unitsN3.sort((a, b) => {
+        data.unitsN3 = data.unitsN3.sort((a, b) => {
             if (a.ISC[0] > b.ISC[0]) return 1;
             if (a.ISC[0] < b.ISC[0]) return -1;
             return 0;
@@ -49,7 +55,7 @@ function Sectorial(props) {
     }
 
     if (sorting === 'type') {
-        unitsN3.sort((a, b) => {
+        data.unitsN3.sort((a, b) => {
             if (a.perfiles[0].tipo > b.perfiles[0].tipo) {
                 return 1;
             } else if (a.perfiles[0].tipo < b.perfiles[0].tipo) {
@@ -66,7 +72,7 @@ function Sectorial(props) {
         });
     }
 
-    const createUnitList = unitsN3.map((unit) => {
+    const createUnitList = data.unitsN3.map((unit) => {
         if (
             unit.perfiles[0].nombre &&
             unit.perfiles[0].nombre.includes('(Infinity Spec-Ops)')
@@ -78,11 +84,9 @@ function Sectorial(props) {
         )[0].nombre;
 
         let unitExistsInN4 = manualLinks[unit.id.toString()]
-            ? props.data.unitsN4.find(
-                  (u) => u.id === manualLinks[unit.id.toString()]
-              )
+            ? data.unitsN4.find((u) => u.id === manualLinks[unit.id.toString()])
             : null ||
-              props.data.unitsN4.find(
+              data.unitsN4.find(
                   (u) => u.isc.toLowerCase() === unit.ISC.toLowerCase()
               ) ||
               null;
@@ -114,13 +118,13 @@ function Sectorial(props) {
     let n3Unit = null;
 
     if (props.selectedUnitId !== 0) {
-        n3Unit = unitsN3.find((u) => u.id === props.selectedUnitId);
+        n3Unit = data.unitsN3.find((u) => u.id === props.selectedUnitId);
         n4Unit = manualLinks[n3Unit.id.toString()]
-            ? props.data.unitsN4.find(
+            ? data.unitsN4.find(
                   (unit) => unit.id === manualLinks[n3Unit.id.toString()]
               )
             : null ||
-              props.data.unitsN4.find(
+              data.unitsN4.find(
                   (unit) => unit.isc.toLowerCase() === n3Unit.ISC.toLowerCase()
               ) ||
               null;
@@ -131,7 +135,7 @@ function Sectorial(props) {
         /*
         if (!n4Unit && n3Unit['ISC_abr'].length > 0) {
             n4Unit =
-                props.data.unitsN4.find((unit) =>
+                data.unitsN4.find((unit) =>
                     unit.iscAbbr
                         ? unit.iscAbbr.includes(n3Unit['ISC_abr'])
                         : null
@@ -207,7 +211,7 @@ function Sectorial(props) {
                         <Unit
                             data={
                                 new UnitN4(
-                                    unitsN3.find(
+                                    data.unitsN3.find(
                                         (u) => u.id === props.selectedUnitId
                                     ),
                                     { convertFromN3: true }
@@ -222,7 +226,7 @@ function Sectorial(props) {
                         <Unit
                             data={
                                 new UnitN4(n4Unit, {
-                                    filtersN4: props.data.filtersN4
+                                    filtersN4: data.filtersN4
                                 })
                             }
                             useInches={useInches}
