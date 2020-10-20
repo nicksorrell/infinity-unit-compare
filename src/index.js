@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import UnitComparer from './components/UnitComparer/UnitComparer';
 
-ReactDOM.render(<App />, document.getElementById('root')
+ReactDOM.render(<UnitComparer />, document.getElementById('root')
 );

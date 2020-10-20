@@ -4,7 +4,7 @@ import ProfileGroup from './ProfileGroup/ProfileGroup';
 
 import styles from './Unit.module.css';
 
-const Unit = (props) => {
+function Unit (props) {
     if (props.data === null) {
         return null;
     }

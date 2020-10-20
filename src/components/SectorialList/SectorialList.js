@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './SectorialList.module.css';
 
-const SectorialList = (props) => {
+function SectorialList (props) {
     if (props.sectorialId === 0) {
         return (
             <div className={styles.sectorialList}>

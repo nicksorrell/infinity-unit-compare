@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Profile.module.css';
 
-const Profile = (props) => {
+function Profile (props) {
     const profile = props.data;
 
     const characteristics = profile.chars.map((char, index) => {

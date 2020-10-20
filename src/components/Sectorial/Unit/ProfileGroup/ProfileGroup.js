@@ -5,7 +5,7 @@ import Option from './Option/Option';
 
 import styles from './ProfileGroup.module.css';
 
-const ProfileGroup = (props) => {
+function ProfileGroup (props) {
     const profiles = props.data.profiles.map((profile, index) => {
         return (
             <Profile

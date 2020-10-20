@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Option.module.css';
 
-const Option = (props) => {
+function Option (props) {
     const option = props.data;
     const weaponsListBS = [];
     const weaponsListCC = [];
