@@ -119,36 +119,36 @@
 }
 
 .char1 {
-    background-image: url('/infinity/assets/img/char/cube.svg');
+    background-image: url('/../../assets/img/char/cube.svg');
 }
 
 .char3 {
-    background-image: url('/infinity/assets/img/char/regular.svg');
+    background-image: url('/../../assets/img/char/regular.svg');
 }
 
 .char4 {
-    background-image: url('/infinity/assets/img/char/irregular.svg');
+    background-image: url('/../../assets/img/char/irregular.svg');
 }
 
 .char6,
 .char23 {
-    background-image: url('/infinity/assets/img/char/impetuous.svg');
+    background-image: url('/../../assets/img/char/impetuous.svg');
 }
 
 .char7 {
-    background-image: url('/infinity/assets/img/char/frenzy.svg');
+    background-image: url('/../../assets/img/char/frenzy.svg');
 }
 
 .char20 {
-    background-image: url('/infinity/assets/img/char/cube2.svg');
+    background-image: url('/../../assets/img/char/cube2.svg');
 }
 
 .char21 {
-    background-image: url('/infinity/assets/img/char/hackable.svg');
+    background-image: url('/../../assets/img/char/hackable.svg');
 }
 
 .char27 {
-    background-image: url('/infinity/assets/img/char/peripheral.svg');
+    background-image: url('/../../assets/img/char/peripheral.svg');
 }
 
 .data101,
